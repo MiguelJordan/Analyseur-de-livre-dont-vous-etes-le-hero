@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Class-Path: lib/javax.json.jar
+Main-Class: analyseur.view.Main

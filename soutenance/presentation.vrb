@@ -1,0 +1,26 @@
+\frametitle{Éléments techniques}
+\framesubtitle{Pseudocode de l'algorithme de Fruchterman-Reingold (Partie 3)}
+
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\small
+\SetAlgoLined
+\SetKwFunction{fa}{fa}
+\SetKwFunction{fr}{fr}
+\SetKwFunction{cool}{cool}
+
+\SetKwInOut{Input}{Entrées}
+\SetKwInOut{Output}{Sorties}
+
+\Input{Largeur $W$, Longueur $L$, Ensemble de Sommets $V$, Ensemble d'Arêtes $E$, Nombre d'itérations}
+\Output{Positions finales des sommets}
+
+\For{$v$ \textbf{in} $V$}{
+    $v.\text{pos} \gets v.\text{pos} + \frac{v.\disp}{|v.\disp|} \times \min(v.\disp, t)$\;
+    $v.\text{pos.x} \gets \min(\frac{W}{2}, \max(-\frac{W}{2}, v.\text{pos.x}))$\;
+    $v.\text{pos.y} \gets \min(\frac{L}{2}, \max(-\frac{L}{2}, v.\text{pos.y}))$\;
+}
+$t \gets \text{cool}(t)$\;
+
+\end{algorithm}
+

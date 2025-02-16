@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{koor_fr}
+{Extraction d'expressions régulières en Java}.
+\newblock
+  \url{https://koor.fr/Java/Tutorial/java_regular_expression_extraction.wp}.
+
+\bibitem{atomutek_org}
+{Livres-jeux et théorie des graphes}.
+\newblock \url{https://notes.atomutek.org/gamebooks-and-graph-theory.html}.
+
+\bibitem{projectaon}
+{Terres légendaires}.
+\newblock \url{https://projectaon.org/staff/christian/gamebook.js/fotw.php}.
+
+\bibitem{javatpoint}
+{Tracé en Java}.
+\newblock \url{https://www.javatpoint.com/java-plot}.
+
+\bibitem{youtube}
+{YouTube - Tutoriel JavaFX}.
+\newblock \url{https://www.youtube.com/watch?v=JAe7Oscsp98}.
+
+\bibitem{cs_brown_edu}
+R.~Tamassia.
+\newblock {Dessin de graphes à force dirigée}.
+\newblock
+  \url{https://cs.brown.edu/people/rtamassi/gdhandbook/chapters/force-directed.pdf}.
+
+\end{thebibliography}

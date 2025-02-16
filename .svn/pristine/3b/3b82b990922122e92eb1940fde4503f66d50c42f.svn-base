@@ -1,0 +1,18 @@
+package analyseur.extraction;
+import java.util.List;
+
+import analyseur.backbone.Page;
+
+public class TestText {
+     public static void main(String[] args) {
+        TextBuilder j = new TextBuilder("src/analyseur/extraction/files/ames.txt");
+        List<Page> pages;
+        pages= j.getPages();
+   
+ 
+
+     for(Page p: pages ){
+        System.out.println(p);
+     }
+}
+}

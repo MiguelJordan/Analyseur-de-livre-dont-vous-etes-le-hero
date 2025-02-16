@@ -1,0 +1,60 @@
+package analyseur.extraction;
+import java.util.*;
+
+import analyseur.backbone.Page;
+import analyseur.model.*;
+import analyseur.questions.*;
+
+public class TestText {
+     public static void main(String[] args) {
+        TextBuilder j = new TextBuilder("res/ames.txt");
+        List<Page> pages;
+        pages= j.getPages();
+
+       
+
+     System.out.println("#########################################################");
+     System.out.println("-------------------------Livre Texte-----------------------");
+       
+           
+     Graph graph1 = new Graph(pages);
+     Map<String, Node> nodesMap = new HashMap<>();
+     nodesMap = graph1.getNodeMap();
+    
+     PathFindingBFS bfs = new PathFindingBFS(nodesMap.get("1"), nodesMap.get("400"), nodesMap);
+     ArrayList<String> path = bfs.pathFindingBFS();
+     System.out.println("#########################################################");
+     System.out.println("Le plus court chemin :");
+     System.out.println(path);
+     System.out.println("#########################################################");
+     Fight fight = new Fight();
+     int fightNumbers = fight.totalFight(nodesMap);
+     System.out.println("Le nombre total de combats est: "+fightNumbers);
+     System.out.println("Le plus grand nombre  de combats pour une page est: "+fight.mostFightNumber(nodesMap));
+     System.out.println("La page qui a le plus de combats est: "+fight.mostFightNode(nodesMap));
+     System.out.println("#########################################################");
+     Dead d = new Dead();
+     System.out.println("Le nombre de noeud de defaite est: "+d.nbrDeads(nodesMap));
+     System.out.println("Ces differents noeuds sont : "+d.nodeDeads(nodesMap));
+     System.out.println("#########################################################");
+    
+     List<String> defaites = new ArrayList<>();
+     defaites = d.nodeDeads(nodesMap);
+     ArrayList<String> deadShortPath = new ArrayList<>();
+     ArrayList<String> deadShortPathTemp = new ArrayList<>();
+     PathFindingBFS bfs2;
+     bfs2 = new PathFindingBFS(nodesMap.get("1"), nodesMap.get("350"), nodesMap);
+     deadShortPath = bfs2.pathFindingBFS();
+     for(String s : defaites){
+        bfs2 = new PathFindingBFS(nodesMap.get("1"), nodesMap.get(s), nodesMap);
+        deadShortPathTemp = bfs2.pathFindingBFS();
+        if(deadShortPath.size() > deadShortPathTemp.size()){
+          deadShortPath = deadShortPathTemp;
+          //System.out.println(deadShortPath+"\n longueur:"+deadShortPath.size());
+        }
+     }
+     System.out.println("Le plus court chemin vers la defaite est :"+deadShortPath);
+
+    
+}
+}

@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"analyseur.backbone"},{"l":"analyseur.extraction"},{"l":"analyseur.model"},{"l":"analyseur.questions"},{"l":"analyseur.test"},{"l":"analyseur.view"}]
