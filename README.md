@@ -1,5 +1,4 @@
-# Pour lancer le graphe, il faut se positionner dans la racine du projet,ouvrez un
-# terminale et taper les commandes suivantes :
+# Pour lancer le graphe, il faut se positionner dans la racine du projet, ouvrez un terminal et exécutez les commandes suivantes :
 
 # Avec ANT :
  - ant compile
